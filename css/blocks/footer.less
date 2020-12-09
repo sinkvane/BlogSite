@@ -1,0 +1,114 @@
+// main: ../style.less
+
+.footer {
+    background-color: @black;
+    padding: 1rem 0;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media @mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.footer__credits {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media @mobile-sm, @mobile-md, @mobile {
+        width: 100%;
+    }
+}
+
+.footer__copyright {
+    padding-right: .8rem;
+    margin-right: 1rem;
+    font-size: .94rem;
+    color: #BBBBCC;
+    border-right: 1px solid rgba(@gray, 35%);
+
+    @media @mobile {
+        margin-bottom: 0 auto;
+    }
+
+    @media @mobile, @mobile-md, @mobile-sm {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    a {
+        margin-right: 1.2rem;
+    }
+
+    @media @mobile {
+        margin-top: 1rem;
+        width: 100%;    
+    }
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    font-size: .94rem;
+    flex-wrap: wrap;
+
+    @media @mobile-sm {
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+
+    @media @tablet {
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+}
+
+.footer__nav-link {
+    margin-left: 1.5rem;
+    color: #BBBBCC;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--btn {
+        border: 1px solid @gray-light;
+        border-radius: 20px;
+        padding: 0.5rem 1.4rem;
+        transition: all .1s linear;
+        line-height: 1.1;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #BBBBCC;
+            border-color: #BBBBCC;
+            color: @black
+        }
+    }
+
+    @media @mobile-sm {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+    }
+
+    @media @tablet {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+    }
+}

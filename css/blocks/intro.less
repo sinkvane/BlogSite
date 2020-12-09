@@ -1,0 +1,95 @@
+// main: ../style.less
+
+.intro {
+    margin-top: 65px;
+}
+
+.intro__inner {
+    display: flex;
+    padding-top: 6.6rem;
+    padding-bottom: 9rem;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(@gray, .3);
+    background: url("/img/intro/intro__symbols.png") right bottom no-repeat;
+    position: relative;
+
+    @media @tablet {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-size: 400px;
+        height: auto;
+    }
+
+    @media @mobile-sm {
+        .btn + .btn {
+            margin: .5rem 0;
+        }
+    }
+}
+
+.intro__content {
+    width: 50%;
+
+    @media @mobile-sm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        margin: 0 -.1rem ;
+
+        .btn {
+            width: 50%;
+        }
+    }
+
+    @media @mobile-md {
+        width: 100%;
+    }
+}
+
+.intro__suptitle {
+    color: @black;
+    font-weight: 200;
+    font-size: 2.13rem;
+
+    @media @tablet {
+        font-size: 1.5rem;
+    }
+}
+
+.intro__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: @black;
+    margin-bottom: 5px;
+
+    @media @tablet {
+        font-size: 2rem;
+    }
+}
+
+.intro__text {
+    font-size: 1.2rem;
+    color: rgba(@black, .7);
+    margin-bottom: 25px;
+}
+
+.intro__photo {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    z-index: 1;
+
+    @media @tablet {
+        width: 350px;
+    }
+
+    @media @mobile-md {
+        display: none;
+    }
+
+    @media @mobile-sm {
+        display: none;
+    }
+}
+

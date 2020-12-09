@@ -1,0 +1,49 @@
+// main: ../style.less
+
+.text-center {
+    text-align: center;
+
+    @media @mobile-sm {
+        .btn + .btn {
+            margin: .5rem 0;
+        }
+    }
+
+    @media @mobile-sm {
+        .btn {
+            width: 50%;
+        }
+    }
+}
+
+.text-right {
+    text-align: right;
+
+    @media @tablet  {
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.mb-o {
+    margin-bottom: 0;
+}
+
+.hide {
+    display: none;
+}

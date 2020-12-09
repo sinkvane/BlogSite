@@ -1,0 +1,129 @@
+// main: ../style.less
+
+.about {
+    margin:  8.4rem 0;
+
+    @media @tablet {
+        margin:  4.4rem 0;
+    }
+}
+
+.about__inner {
+    display: flex;
+    justify-content: center;
+    max-width: 1090px;
+
+    @media @mobile-sm {
+        .btn + .btn {
+            margin: .5rem 0;
+        }
+    }
+}
+
+.about__photo, .about__content {
+    @media @tablet {
+        width: 100%;    
+    }
+}
+
+.about__photo {
+    position: relative;
+    width: 50%;
+
+    & img {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    &:before {
+        content: "";
+        width: 413px;
+        height: 413px;
+        background-color: #EFEFEF;
+        position: absolute;
+        left: 1rem;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    @media @tablet {
+        display: none;
+    }
+}
+
+.about__content {
+    margin-top: 2rem;
+    width: 50%;
+    padding: 0 0 0 3.2rem;
+
+    @media @tablet {
+        width: 100%;
+        padding: 0 1rem 0;
+    }
+
+    @media @mobile-sm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .btn {
+            width: 50%;
+        }
+    }
+
+    @media @mobile-md {
+        width: 100%;
+    }
+}
+
+.about__title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+
+    @media @laptop {
+        font-size: 2.5rem;
+    }
+}
+
+.about__bigtitle {
+    font-size: 6.1rem;
+    font-weight: 700;
+    color: rgba(@black, 15%);
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 1.4rem;
+    position: relative;
+    left: -10px;
+
+    @media @laptop {
+        font-size: 4rem;
+    }
+
+    @media @mobile-sm {
+        font-size: 3.5rem;
+        left: -3px;
+    }
+}
+
+.about__text {
+    font-size: .8rem;
+    color: @gray;
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 2.8rem;
+
+    @media @tablet {
+        font-size: 1.1rem;
+    }
+
+    @media @mobile-md {
+        font-size: .8rem;
+    }
+
+    @media @mobile-sm {
+        font-size: .9rem;
+    }
+}

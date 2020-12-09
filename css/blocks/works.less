@@ -1,0 +1,40 @@
+// main: ../style.less
+
+.works {
+    margin: 2.8rem 0;
+}
+
+.works__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.works__nav-link {
+    text-decoration: none;
+    color: rgba(@black, .7);
+    font-size: .8rem;
+    margin: 0 1.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 1px;
+        background-color: @black;
+        
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        z-index: 1;
+        transition: all .1s linear;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}

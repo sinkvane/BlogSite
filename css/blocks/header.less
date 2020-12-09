@@ -1,0 +1,26 @@
+// main: ../style.less
+
+.header {
+    padding: 1.2rem 0;
+    position: relative;
+
+    @media @mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(@black, .3);
+
+        .nav + .show {
+            box-shadow: none;       
+        }
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

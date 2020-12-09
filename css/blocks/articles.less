@@ -1,0 +1,144 @@
+// main: ../style.less
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.articles__col {
+    width: 33.33333%;
+    padding: 1rem;
+
+    @media @laptop {
+        width: 50%;
+    }
+
+    @media @tablet {
+        margin: 1rem;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    @media @mobile-sm {
+        width: 100%;
+    }
+}
+
+.articles__item {
+    margin-bottom: 2rem;
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.articles__header {
+    position: relative;
+    margin-bottom: 1.35rem;
+}
+
+.articles__content {
+    margin-bottom: 2rem;
+}
+
+.articles__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 77px;
+    height: 77px;
+    background-color: @black;
+    text-align: center;
+    color: @white;
+    font-size: 1.06rem;
+    line-height: 1.4;
+}
+
+.articles__photo {
+    display: block;
+    min-width: 100%;
+    height: auto;
+
+    @media @mobile-sm {
+        width: 90%;
+        height: auto;
+    }
+}
+
+.articles__title {
+    cursor: pointer;
+    margin-bottom: .6rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: @black;
+    font-weight: 700;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 2.5px;
+        background-color: @black;
+        
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        z-index: 1;
+        transition: all .1s linear;
+    }
+
+    &:hover:not(.nav__link--btn) {
+
+        &:after {
+            width: 100%;
+        }
+
+    }
+
+    @media @laptop {
+        font-size: 1.5rem;
+    }
+
+    @media @mobile-sm {
+        font-size: 1.3rem;
+    }
+}
+
+.articles__cat {
+    margin-bottom: 1.5rem;
+    font-size: .8rem;
+    color: @black;
+    text-transform: uppercase;
+
+    @media @tablet {
+        font-size: 1.2rem;
+    }
+
+    @media @mobile-sm {
+        font-size: 1.1rem;
+    }
+}
+
+.articles__text {
+    color: @gray;
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 2;
+
+    @media @laptop {
+        font-size: 1.1rem;
+    }
+
+    @media @tablet {
+        font-size: 1.3rem;
+    }
+
+    @media @mobile-sm {
+        font-size: 1.1rem;
+    }
+}
